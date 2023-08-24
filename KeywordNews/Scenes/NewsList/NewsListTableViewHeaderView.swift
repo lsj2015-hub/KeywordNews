@@ -22,6 +22,18 @@ final class NewsListTableViewHeaderView: UITableViewHeaderFooterView {
   }
 }
 
+extension NewsListTableViewHeaderView: TTGTextTagCollectionViewDelegate {
+  func textTagCollectionView(
+    _ textTagCollectionView: TTGTextTagCollectionView!,
+    didTap tag: TTGTextTag!,
+    at index: UInt
+  ) {
+    guard tag.selected else { return }
+    
+    print(tags[Int(index)])
+  }
+}
+
 private extension NewsListTableViewHeaderView {
   func setupTagCollectionViewLayout() {
     addSubview(tagCollectionView)
@@ -32,6 +44,7 @@ private extension NewsListTableViewHeaderView {
   }
   
   func setupTagCollectionView() {
+    tagCollectionView.delegate = self
     tagCollectionView.numberOfLines = 1
     tagCollectionView.scrollDirection = .horizontal
     tagCollectionView.showsHorizontalScrollIndicator = false
@@ -80,6 +93,7 @@ private extension NewsListTableViewHeaderView {
         selectedStyle: selectedStyle
       )
       tagCollectionView.addTag(tag)
+      tagCollectionView.reload()
     }
   }
 }
