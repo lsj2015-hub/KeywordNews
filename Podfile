@@ -6,6 +6,7 @@ target 'KeywordNews' do
   use_frameworks!
 
   # Pods for KeywordNews
+  use_frameworks!
   pod "TTGTagCollectionView"
 
   target 'KeywordNewsTests' do
