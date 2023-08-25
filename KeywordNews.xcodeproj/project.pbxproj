@@ -24,6 +24,9 @@
 		D2A509C22A95ADA2009C2F4B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D2A509C12A95ADA2009C2F4B /* SnapKit */; };
 		D2A509C52A95ADBE009C2F4B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2A509C42A95ADBE009C2F4B /* Alamofire */; };
 		D2CE0B362A984FC600626398 /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE0B352A984FC600626398 /* NewsWebViewController.swift */; };
+		D2CE0B392A9859B900626398 /* NewsRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE0B382A9859B900626398 /* NewsRequestModel.swift */; };
+		D2CE0B3B2A9859CA00626398 /* NewsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE0B3A2A9859CA00626398 /* NewsResponseModel.swift */; };
+		D2CE0B3E2A985ADB00626398 /* NewsSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE0B3D2A985ADB00626398 /* NewsSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		D2A509B12A95AD2B009C2F4B /* KeywordNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordNewsUITests.swift; sourceTree = "<group>"; };
 		D2A509B32A95AD2B009C2F4B /* KeywordNewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordNewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D2CE0B352A984FC600626398 /* NewsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
+		D2CE0B382A9859B900626398 /* NewsRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequestModel.swift; sourceTree = "<group>"; };
+		D2CE0B3A2A9859CA00626398 /* NewsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseModel.swift; sourceTree = "<group>"; };
+		D2CE0B3D2A985ADB00626398 /* NewsSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSearchManager.swift; sourceTree = "<group>"; };
 		E651CD64D05EB2A86FF1765E /* Pods-KeywordNews-KeywordNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeywordNews-KeywordNewsUITests.release.xcconfig"; path = "Target Support Files/Pods-KeywordNews-KeywordNewsUITests/Pods-KeywordNews-KeywordNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +166,8 @@
 			children = (
 				D2A509902A95AD2A009C2F4B /* AppDelegate.swift */,
 				D2A509922A95AD2A009C2F4B /* SceneDelegate.swift */,
+				D2CE0B3F2A985AE000626398 /* Managers */,
+				D2CE0B3C2A9859D100626398 /* Models */,
 				D2A49F612A96FE4A0025BA7F /* Scenes */,
 				D2A509992A95AD2B009C2F4B /* Assets.xcassets */,
 				D2A5099B2A95AD2B009C2F4B /* LaunchScreen.storyboard */,
@@ -191,6 +199,23 @@
 				D2CE0B352A984FC600626398 /* NewsWebViewController.swift */,
 			);
 			path = NewsWeb;
+			sourceTree = "<group>";
+		};
+		D2CE0B3C2A9859D100626398 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE0B382A9859B900626398 /* NewsRequestModel.swift */,
+				D2CE0B3A2A9859CA00626398 /* NewsResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D2CE0B3F2A985AE000626398 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE0B3D2A985ADB00626398 /* NewsSearchManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		F10C6181E1F0D57067DDA92B /* Pods */ = {
@@ -452,9 +477,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2CE0B392A9859B900626398 /* NewsRequestModel.swift in Sources */,
 				D2A509952A95AD2A009C2F4B /* NewsListViewController.swift in Sources */,
 				D2A49F662A970E860025BA7F /* NewsListTableViewCell.swift in Sources */,
 				D2A49F682A971AF50025BA7F /* NewsListTableViewHeaderView.swift in Sources */,
+				D2CE0B3E2A985ADB00626398 /* NewsSearchManager.swift in Sources */,
+				D2CE0B3B2A9859CA00626398 /* NewsResponseModel.swift in Sources */,
 				D2A509912A95AD2A009C2F4B /* AppDelegate.swift in Sources */,
 				D2CE0B362A984FC600626398 /* NewsWebViewController.swift in Sources */,
 				D2A509932A95AD2A009C2F4B /* SceneDelegate.swift in Sources */,
