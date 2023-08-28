@@ -9,7 +9,8 @@ import UIKit
 import SnapKit
 
 final class NewsListViewController: UIViewController {
-  private lazy var presenter = NewsListPresenter(viewController: self)
+  private lazy var presenter = NewsListPresenter(
+    viewController: self)
   private lazy var refreshControl: UIRefreshControl = {
     let refreshControl = UIRefreshControl()
     refreshControl.addTarget(self, action: #selector(didCalledRefresh), for: .valueChanged)
@@ -42,7 +43,7 @@ final class NewsListViewController: UIViewController {
     presenter.viewDidLoad()
     NewsSearchManager()
       .request(from: "아이폰", start: 1, display: 20) { newsArray in
-        print(newsArray)
+//        print(newsArray)
       }
   }
 }
@@ -65,9 +66,13 @@ extension NewsListViewController: NewsListProtocol {
     refreshControl.endRefreshing()
   }
   
-  func moveToNewsWebViewController() {
-    let newsWebViewController = NewsWebViewController()
+  func moveToNewsWebViewController(with news: News) {
+    let newsWebViewController = NewsWebViewController(news: news)
     navigationController?.pushViewController(newsWebViewController, animated: true)
+  }
+  
+  func reloadTableView() {
+    tableView.reloadData()
   }
 }
 
